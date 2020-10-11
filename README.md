@@ -3,6 +3,10 @@ Running Debian on the Western Digital WD Sentinel DX4000
 
 ---
 
+![WD Sentinel DX4000](./img/wdnas.jpg?raw=true)
+
+---
+
 This guide will go through the entire process of running Debian on the WD Sentinel DX4000 from start to finish.
 
 ## Prerequisites
