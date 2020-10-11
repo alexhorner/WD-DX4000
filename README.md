@@ -23,7 +23,7 @@ This guide will go through the entire process of running Debian on the WD Sentin
 Head to Install.md to start!
 
 ## Other guides
-- Hard Drives - Coming very soon!
+- Hard Drives - Disks.md
 - LCD - Might need help?
 - Fan - Might need help?
 
