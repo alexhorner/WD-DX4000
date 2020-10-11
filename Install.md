@@ -2,7 +2,7 @@
 
 ## Part 1 - Serial Access
 
-In order to follow this guide, BIOS access is a requirement. the DX4000 does not provide any video out, and the onboard PCIE slow does not support a graphics card (that I have to hand)
+In order to follow this guide, BIOS access is a requirement. the DX4000 does not provide any video out, and the onboard PCIE also does not support any graphics card (that I have to hand and tested)
 
 To get access to the BIOS, a small modification must be completed which is the addition of 3 flywires to the motherboard.
 
@@ -18,7 +18,7 @@ Looking down upon the motherboard, on the top left there are pads for a serial p
 
 on the pads (J23) Black is ground, Red is TX, Grey is RX.
 
-Connect yur adapter to your computer and use Device Manager to identify the COM port, in my case COM3. Configure PuTTY to use your COM port at 115200 baud:
+Connect your adapter to your computer and use Device Manager to identify the COM port, in my case COM3. Configure PuTTY to use your COM port at 115200 baud:
 
 ![PuTTY Configuration](./img/putty.jpg?raw=true)
 
@@ -30,7 +30,7 @@ Connect your USB install drive and open Rufus. Configure Rufus like below:
 
 Select your Debian ISO by clicking the CD Drive icon on the right under Format Options.
 
-Ensure (triple check!) you have the correct device sleected, because selecting the wrong device could wipe out another device with your data on it!
+Ensure (triple check!) you have the correct device selected, because selecting the wrong device could wipe out another device with your data on it!
 
 Click start. You will be asked what mode you wish to use:
 
@@ -140,7 +140,7 @@ When your NAS reboots, you will be presented with the Debian Installer GRUB menu
 
 ![Debian Installer GRUB](./img/afterbios.jpg?raw=true)
 
-Place your USB keyboard aside (don't unplug). We are now goint to use your normal keyboard with PuTTY.
+Place your USB keyboard aside (don't unplug). We are now going to use your normal keyboard with PuTTY.
 
 Press enter on the `Serial Console install` option.
 
@@ -228,7 +228,7 @@ Leave the HTTP proxy empty (unless you know what you need to input) and press en
 
 ![Debian Installer Package Manager HTTP Proxy](./img/debianinstall21.jpg?raw=true)
 
-Choose whether you wish to participate in package populatiry data collection:
+Choose whether you wish to participate in package popularity data collection:
 
 ![Debian Installer Package Data Collection](./img/debianinstall22.jpg?raw=true)
 
