@@ -28,8 +28,8 @@ Head to Install.md to start!
 
 ## Other guides
 - Hard Drives - Disks.md
+- Fan - Superio.md
 - LCD - Might need help?
-- Fan - Might need help?
 
 ---
 
