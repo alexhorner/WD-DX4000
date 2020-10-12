@@ -33,6 +33,17 @@ Head to Install.md to start!
 
 ---
 
+## Goals
+- Fan Control - **COMPLETE**
+- LCD Writing - Works with manual control in default Windows
+- LCD Contrast - Works with manual control in default Windows
+- Front Panel Button Reads - Works with manual control in default Windows
+- LED Control (RAID indicators and power indicators. Red and blue individually) - Pretty sure this is available as it is used by the default Windows software, but I couldn't work out how to control manually within default Windows
+
+There may be LCD brightness but I haven't seen it anywhere or witnessed it in operation.
+
+---
+
 DISCLAIMER: I am not liable to any damages of any kind which are caused directly or indirectly by following this guide. You follow the provided instructions and use all provided information at your own risk, in the full knowledge that I am not required to assist you if something goes wrong (though if you ask I may try)
 
 ---
