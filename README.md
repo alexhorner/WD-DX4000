@@ -34,13 +34,12 @@ Head to Install.md to start!
 ---
 
 ## Goals
-- Fan Control - **COMPLETE**
+- Fan Control - **COMPLETE** Superio.md
 - LCD Writing - Works with manual control in default Windows
 - LCD Contrast - Works with manual control in default Windows
+- LCD Brightness - **COMPLETE** LCD.md
 - Front Panel Button Reads - Works with manual control in default Windows
 - LED Control (RAID indicators and power indicators. Red and blue individually) - Pretty sure this is available as it is used by the default Windows software, but I couldn't work out how to control manually within default Windows
-
-There may be LCD brightness but I haven't seen it anywhere or witnessed it in operation.
 
 ---
 
