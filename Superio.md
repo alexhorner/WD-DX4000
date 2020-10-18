@@ -185,7 +185,7 @@ Select a temperature sensor as source for hwmon1/pwm2:
 select (1-n):
 ```
 
-Use the temperature reading list to choose the second hottest sensor, in my case thats `hwmon1/temp2_input` and press enter. I chose this sensor as it appears to change the most in my testing and appears to be the CPU temp. The hottest one appears to be a chassis sensor which doesn't really change no matter the fan speed.
+Use the temperature reading list to choose the hottest CPU core (on hwmon0), in my case thats `hwmon0/temp3_input` and press enter. I chose this sensor as it appears to change the most in my testing and appears to be the CPU temp. The hottest one appears to be a chassis sensor which doesn't really change no matter the fan speed.
 
 For this question:
 ```
@@ -193,7 +193,7 @@ Enter the low temperature (degree C)
 below which the fan should spin at minimum speed (20):
 ```
 
-I entered 35
+I entered 40
 
 For this question:
 ```
@@ -201,7 +201,7 @@ Enter the high temperature (degree C)
 over which the fan should spin at maximum speed (60):
 ```
 
-I entered 90 as the box seems to run quite hot even with the fan on max (70s)
+I entered 70
 
 For this question:
 ```
@@ -234,7 +234,7 @@ Enter the PWM value (0-2) to use when the temperature
 is below the low temperature limit (0):
 ```
 
-I chose 2 to ensure the fan was always running a bit (though its inaudiable)
+I chose 0
 
 And for this question:
 ```
