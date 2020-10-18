@@ -201,7 +201,7 @@ Enter the high temperature (degree C)
 over which the fan should spin at maximum speed (60):
 ```
 
-I entered 70
+I entered 80
 
 For this question:
 ```
