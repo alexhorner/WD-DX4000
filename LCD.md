@@ -1,6 +1,6 @@
 # LCD Control
 
-**PLEASE NOTE**: This is missing bits. Although I know you can change the contrast of and the text on the LCD, I have not yet figured out a way to do so. I have however worked out how to control the bightness.
+**PLEASE NOTE**: This is missing bits. Although I know you can change the contrast of the LCD, I have not yet figured out a way to do so. I have however worked out how to control the bightness and text.
 
 ## Brightness
 
@@ -15,4 +15,63 @@ echo "128" > /sys/class/hwmon/hwmon1/pwm3
 TODO
 
 ## Text
+Controlling the LCD on the DX4000 is extremely easy. It is wired to the Serial Port which is present on the SuperIO chip using WinAmp HD44780 wiring, which is as follows (number in brackets is physical pin):
+
+- LPT D0     (2)  -> LCD D0 (7)
+- LPT D1     (3)  -> LCD D1 (8)
+- LPT D2     (4)  -> LCD D2 (9)
+- LPT D3     (5)  -> LCD D3 (10)
+- LPT D4     (6)  -> LCD D4 (11)
+- LPT D5     (7)  -> LCD D5 (12)
+- LPT D6     (8)  -> LCD D6 (13)
+- LPT D7     (9)  -> LCD D7 (14)
+- LPT Strobe (1)  -> LCD EN (6)
+- LPT LF     (14) -> LCD RW (5)
+- LPT INIT   (16) -> LCD RS (6)
+
+More information can be found on the LCDProc document http://lcdproc.sourceforge.net/docs/lcdproc-0-5-5-user.html#hd44780-8bit-winamp.base-mapping
+
+### LCDProc
+LCDProc is a popular free LCD control daemon for Linux. It supports the DX4000's LCD and can show system statistics and other information.
+
+To install LCDProc run the `apt-get install lcdproc` command.
+
+Once installed, we need to configure LCDd to use the LCD correctly. Open LCDd's config with the `nano /etc/LCDd.conf` command.
+
+Remove the contents of the file (except the cme notice at the top) and paste the following configuration:
+```
+[server]
+DriverPath=/usr/lib/x86_64-linux-gnu/lcdproc/
+Driver=hd44780
+ServerScreen=no
+Heartbeat=off
+
+[menu]
+
+[hd44780]
+ConnectionType=winamp
+Port=0x378
+bidirectional=yes
+Speed=0
+Keypad=no
+Backlight=no
+Size=16x2
+DelayBus=no
+```
+
+Now save and close the file with CTRL+X then Y then Enter.
+
+Start LCDd with the `service LCDd start` command.
+
+You can configure LCDd to start at boot with the `systemctl enable LCDd` command.
+
+The LCD should now show the server home screen like below:
+
+![LCDProc Server Home Screen](./img/lcdprocserverhome.jpg?raw=true)
+
+You can start displaying statistics by simply running the `lcdproc -f` command which shows a series of screens. For more information on available screens use `lcdproc -h`. Here is an example screen:
+
+![LCDProc Example](./img/lcdprocexample.jpg?raw=true)
+
+### Custom DX4000 Software
 TODO

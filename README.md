@@ -29,13 +29,14 @@ Head to Install.md to start!
 ## Other guides
 - Hard Drives - Disks.md
 - Fan - Superio.md
-- LCD - Might need help?
+- LCD - LCD.md
+- Hardware - Hardware.md
 
 ---
 
 ## Goals
 - Fan Control - **COMPLETE** Superio.md
-- LCD Writing - Works with manual control in default Windows
+- LCD Writing - **COMPLETE** LCD.md
 - LCD Contrast - Works with manual control in default Windows
 - LCD Brightness - **COMPLETE** LCD.md
 - Front Panel Button Reads - Works with manual control in default Windows
