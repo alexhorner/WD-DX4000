@@ -2,7 +2,7 @@
 
 ## Part 1 - Serial Access
 
-In order to follow this guide, BIOS access is a requirement. the DX4000 does not provide any video out, and the onboard PCIE also does not support any graphics card (that I have to hand and tested)
+In order to follow this guide, BIOS access is a requirement. the DX4000 does not provide any video out, and the onboard PCIe also does not support any graphics card (that I have to hand and tested)
 
 To get access to the BIOS, a small modification must be completed which is the addition of 3 flywires to the motherboard.
 
@@ -42,7 +42,7 @@ Choose ISO mode and click OK.
 
 READ!! and accept the warning.
 
-Now we need to made a modification to the boot menu of the installer. Open file explorer and navigate to the USB:
+Now we need to make a modification to the boot menu of the installer. Open file explorer and navigate to the USB:
 
 ![USB Root](./img/usbroot.jpg?raw=true)
 
