@@ -1,6 +1,8 @@
 # Debian Installation Guide
 NOTE: This guide expects you to have followed BeforeInstall.md! If you haven't, go do it!
 
+You will need the Debian installation ISO to follow this guide. This guide follows the Debian 10.06.0 install process, however differences should be minimal.
+
 ## Part 1 - Debian Installer
 
 Connect your USB install drive and open Rufus. Configure Rufus like below:
@@ -27,11 +29,11 @@ Now we need to make a modification to the boot menu of the installer. Open file 
 
 Navigate to `/boot/grub`:
 
-![USB /boot/grub](./img/usbbootgrub.jpg?raw=true)
+![USB /boot/grub](./img/usbbootgrubdebian.jpg?raw=true)
 
 Open grub.cfg in your editor:
 
-![GRUB Config](./img/grubcfg.jpg?raw=true)
+![GRUB Config](./img/grubcfgdebian.jpg?raw=true)
 
 On line 27, you can see the default boot entry:
 
@@ -57,7 +59,7 @@ At the top of the config on line 10, set `terminal_output` to `gfxterm console`
 
 Your config will now look like so:
 
-![GRUB Config Modified](./img/grubcfgmodified.jpg?raw=true)
+![GRUB Config Modified](./img/grubcfgmodifieddebian.jpg?raw=true)
 
 ## Part 2 - Set up hardware
 
@@ -117,7 +119,7 @@ Go to Save & Exit and select `Save Changes and Exit`:
 
 When your NAS reboots, you will be presented with the Debian Installer GRUB menu:
 
-![Debian Installer GRUB](./img/afterbios.jpg?raw=true)
+![Debian Installer GRUB](./img/afterbiosdebian.jpg?raw=true)
 
 Place your USB keyboard aside (don't unplug). We are now going to use your normal keyboard with PuTTY.
 
