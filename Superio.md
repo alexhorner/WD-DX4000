@@ -138,7 +138,7 @@ of your system by changing fanspeeds.
 Do you want to set up its configuration file now (y)?
 ```
 
-Make sure the fan is running (if now, shutodwn and start this entire step again to prevent thermal damage!) and then press enter.
+Make sure the fan is running (if not, shutdown and start this entire step again to prevent thermal damage!) and then press enter.
 
 For `What should be the path to your fancontrol config file (/etc/fancontrol)?` press enter.
 

@@ -1,5 +1,5 @@
 # WD-DX4000
-Running Debian on the Western Digital WD Sentinel DX4000
+Running Ubuntu or Debian on the Western Digital WD Sentinel DX4000
 
 ---
 
@@ -7,7 +7,7 @@ Running Debian on the Western Digital WD Sentinel DX4000
 
 ---
 
-This guide will go through the entire process of running Debian on the WD Sentinel DX4000 from start to finish.
+This guide will go through the entire process of running Ubuntu or Debian on the WD Sentinel DX4000 from start to finish.
 
 ## Prerequisites
 - USB Keyboard
@@ -17,6 +17,10 @@ This guide will go through the entire process of running Debian on the WD Sentin
 - PuTTY installed (https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 - Rufus installed (I recommend using 2.18 for compatibility https://github.com/pbatard/rufus/releases/download/v2.18/rufus-2.18.exe)
 - Debian ISO downloaded (Get the small installation image 64-bit PC netinst iso https://www.debian.org/distrib/)
+  
+  OR
+
+  Ubuntu ISO downloaded (Get the full server installer iso https://ubuntu.com/download/server)
 - USB TTL serial adapter
 - Soldering iron and wires to attach your TTL serial adapter to the pads on the board
 
@@ -26,7 +30,7 @@ This guide will go through the entire process of running Debian on the WD Sentin
 
 ---
 
-Head to Install.md to start!
+Head to BeforeInstall.md to start!
 
 ## Other guides
 - Hard Drives - Disks.md

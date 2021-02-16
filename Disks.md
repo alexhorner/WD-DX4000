@@ -31,7 +31,7 @@ The disks should have spun up in the time you spent installing MDADM. Run `ls /d
 
 etc...
 
-We will use Bay 1 and 2 for a RAID. More devices can be used. Refer to MDADM guides for this. MAKE SURE that the adb and sec devices are the ones you intend to use!
+We will use Bay 1 and 2 for a RAID. More devices can be used. Refer to MDADM guides for this. MAKE SURE that the sdb and sdc devices are the ones you intend to use!
 
 ## Step 3 - Configure RAID
 

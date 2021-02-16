@@ -1,28 +1,9 @@
-# Installation Guide
+# Debian Installation Guide
+NOTE: This guide expects you to have followed BeforeInstall.md! If you haven't, go do it!
 
-## Part 1 - Serial Access
+You will need the Debian installation ISO to follow this guide. This guide follows the Debian 10.06.0 install process, however differences should be minimal.
 
-In order to follow this guide, BIOS access is a requirement. the DX4000 does not provide any video out, and the onboard PCIe also does not support any graphics card (that I have to hand and tested)
-
-To get access to the BIOS, a small modification must be completed which is the addition of 3 flywires to the motherboard.
-
-To begin, remove all drives from the DX4000 and the 5 rear screws on the case:
-
-![Rear Case](./img/rear.jpg?raw=true)
-
-With the case removed, turn the DX4000 anticlockwise 90 degrees, so that the front panel is touching your left hand and the rear IO your right hand.
-
-Looking down upon the motherboard, on the top left there are pads for a serial port. Solder wires to the pads and connect them to your USB to Serial adapter like so:
-
-![Serial Port](./img/serial.jpg?raw=true)
-
-on the pads (J23) Black is ground, Red is TX, Grey is RX.
-
-Connect your adapter to your computer and use Device Manager to identify the COM port, in my case COM3. Configure PuTTY to use your COM port at 115200 baud:
-
-![PuTTY Configuration](./img/putty.jpg?raw=true)
-
-## Part 2 - Debian Installer
+## Part 1 - Debian Installer
 
 Connect your USB install drive and open Rufus. Configure Rufus like below:
 
@@ -44,15 +25,15 @@ READ!! and accept the warning.
 
 Now we need to make a modification to the boot menu of the installer. Open file explorer and navigate to the USB:
 
-![USB Root](./img/usbroot.jpg?raw=true)
+![USB Root](./img/usbrootdebian.jpg?raw=true)
 
 Navigate to `/boot/grub`:
 
-![USB /boot/grub](./img/usbbootgrub.jpg?raw=true)
+![USB /boot/grub](./img/usbbootgrubdebian.jpg?raw=true)
 
 Open grub.cfg in your editor:
 
-![GRUB Config](./img/grubcfg.jpg?raw=true)
+![GRUB Config](./img/grubcfgdebian.jpg?raw=true)
 
 On line 27, you can see the default boot entry:
 
@@ -78,9 +59,9 @@ At the top of the config on line 10, set `terminal_output` to `gfxterm console`
 
 Your config will now look like so:
 
-![GRUB Config Modified](./img/grubcfgmodified.jpg?raw=true)
+![GRUB Config Modified](./img/grubcfgmodifieddebian.jpg?raw=true)
 
-## Part 3 - Set up hardware
+## Part 2 - Set up hardware
 
 Ensure no hard disks are in the 4 bays of the DX4000.
 
@@ -90,7 +71,7 @@ Into USB port 2, plug in your USB hub. Plug your USB keyboard and your Debian in
 
 Plug in power on power port 1 and network on network port 1.
 
-## Part 4 - BIOS configuration
+## Part 3 - BIOS configuration
 
 With PuTTY open, press the power button. Spam the DEL key on the USB keyboard (NOT on your PuTTY window using your normal keyboard) You will be presented with the BIOS:
 
@@ -134,11 +115,11 @@ Go to Save & Exit and select `Save Changes and Exit`:
 
 ![Bios Exit](./img/bios3.jpg?raw=true)
 
-## Part 5 - Debian Installation
+## Part 4 - Debian Installation
 
 When your NAS reboots, you will be presented with the Debian Installer GRUB menu:
 
-![Debian Installer GRUB](./img/afterbios.jpg?raw=true)
+![Debian Installer GRUB](./img/afterbiosdebian.jpg?raw=true)
 
 Place your USB keyboard aside (don't unplug). We are now going to use your normal keyboard with PuTTY.
 
@@ -243,7 +224,7 @@ Once the installation has finished, you will be presented with the completion sc
 
 ![Debian Installer Completed](./img/debianinstall25.jpg?raw=true)
 
-Unplug the installation USB and press enter, the switch back to the USB keyboard and spam DEL once the system restarts to enter the BIOS once again.
+Unplug the installation USB and press enter, then switch back to the USB keyboard and spam DEL once the system restarts to enter the BIOS once again.
 
 You'll notice the BIOS looks much nicer due to the configuration changes we made earlier:
 
