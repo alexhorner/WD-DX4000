@@ -1,5 +1,5 @@
 # WD-DX4000
-Running Debian on the Western Digital WD Sentinel DX4000
+Running Ubuntu or Debian on the Western Digital WD Sentinel DX4000
 
 ---
 
@@ -7,7 +7,7 @@ Running Debian on the Western Digital WD Sentinel DX4000
 
 ---
 
-This guide will go through the entire process of running Debian on the WD Sentinel DX4000 from start to finish.
+This guide will go through the entire process of running Ubuntu or Debian on the WD Sentinel DX4000 from start to finish.
 
 ## Prerequisites
 - USB Keyboard
@@ -30,7 +30,7 @@ This guide will go through the entire process of running Debian on the WD Sentin
 
 ---
 
-Head to Install.md to start!
+Head to BeforeInstall.md to start!
 
 ## Other guides
 - Hard Drives - Disks.md

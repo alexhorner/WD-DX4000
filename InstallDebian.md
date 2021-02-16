@@ -224,7 +224,7 @@ Once the installation has finished, you will be presented with the completion sc
 
 ![Debian Installer Completed](./img/debianinstall25.jpg?raw=true)
 
-Unplug the installation USB and press enter, the switch back to the USB keyboard and spam DEL once the system restarts to enter the BIOS once again.
+Unplug the installation USB and press enter, then switch back to the USB keyboard and spam DEL once the system restarts to enter the BIOS once again.
 
 You'll notice the BIOS looks much nicer due to the configuration changes we made earlier:
 
