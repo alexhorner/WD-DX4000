@@ -84,6 +84,8 @@ Simply run `shutdown -r now` and your system will reboot.
 
 ## Step 4 - Fan setup
 
+Please take a moment to run the `sensors` command and observe the name of the hottest CPU core.
+
 To start the fan setup, run the `pwmconfig` command.
 
 When warned:
