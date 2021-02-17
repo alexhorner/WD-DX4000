@@ -1,4 +1,4 @@
-# Setting up Software RAID in Debian
+# Setting up Software RAID in Debian/Ubuntu
 
 Ensure you are logged in as root to proceed.
 
