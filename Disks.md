@@ -9,6 +9,20 @@ Ensure you are logged in as root to proceed.
 
 Insert the disks you want to use into the DX4000. It is safe to do this whilst the system is running.
 
+You will need to clear any existing RAID configuration which has been done with the BIOS RAID utility. If you are converting your machine from stock to Linux, this is especially important. Please note that clearing raid configuration is **DESTRUCTIVE** and will cause **ALL DATA ON ALL ARRAYS TO BE IRRECOVERABLY DELETED**!
+
+As the system POSTs, you will see the RAID configuration utility displayed. All disks should show as `Non-RAID` like below, but if they do not you need to make them Non-RAID, so interrupt the startup and enter the utility using CTRL+I (this must be done from a physical keyboard and not PuTTY):
+
+![RAID utility at POST](./img/nonraiddisk.jpg?raw=true)
+
+You'll be presented with the RAID configuration menu, which shows clear options for deleting RAID arrays and resetting disks to Non-RAID:
+
+![RAID menu](./img/raidmenu.jpg?raw=true)
+
+Once you have saved your changes, you can exit back to your OS and all of your disks will show as accessible devices, which can then be properly configured with your Linux install for RAID with MDADM.
+
+You may ask, why not create the RAID volumes here? My reasoning is that this is not a hardware RAID anyway, so it is easier to manage this from your OS rather than the BIOS utility with little to no performance impact. In addition, you can easily move your disks to any other Linux box with MDADM and easily import them into a working array to recover data should you experience a hardware failure.
+
 ## Step 2 - RAID Software
 
 run `apt-get update` to get the latest API package list, and then run `apt-get install mdadm` to install the software needed for a software RAID.
