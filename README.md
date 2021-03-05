@@ -7,6 +7,12 @@ Running Ubuntu or Debian on the Western Digital WD Sentinel DX4000
 
 ---
 
+## 2021 Update - Ubuntu and Front Panel Controls
+- Ubuntu is now available
+- Work has begun on providing an interface for the entire front panel of the machine, including buttons, LCD (control, contract, brightness) and LEDs. Please visit the dedicated repo for more information and for a working proof of concept: https://github.com/alexhorner/WD-DX4000-IO
+
+---
+
 This guide will go through the entire process of running Ubuntu or Debian on the WD Sentinel DX4000 from start to finish.
 
 ## Prerequisites
@@ -43,10 +49,10 @@ Head to BeforeInstall.md to start!
 ## Goals
 - Fan Control - **COMPLETE** Superio.md
 - LCD Writing - **COMPLETE** LCD.md
-- LCD Contrast - Works with manual control in default Windows
+- LCD Contrast - (IN PROGRESS! See IO repo at top of this README) Works with manual control in default Windows
 - LCD Brightness - **COMPLETE** LCD.md
-- Front Panel Button Reads - Works with manual control in default Windows
-- LED Control (RAID indicators and power indicators. Red and blue individually) - Pretty sure this is available as it is used by the default Windows software, but I couldn't work out how to control manually within default Windows
+- Front Panel Button Reads - (IN PROGRESS! See IO repo at top of this README) Works with manual control in default Windows
+- LED Control (RAID indicators and power indicators. Red and blue individually) - (IN PROGRESS! See IO repo at top of this README)  Pretty sure this is available as it is used by the default Windows software, but I couldn't work out how to control manually within default Windows
 
 ---
 
