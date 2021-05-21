@@ -16,7 +16,7 @@ Looking down upon the motherboard, on the top left there are pads for a serial p
 
 ![Serial Port](./img/serial.jpg?raw=true)
 
-on the pads (J23) Black is ground, Red is TX, Grey is RX.
+on the pads (J23) Black is ground, Red is machine TX (so USB adapter RX), Grey is machine RX (so USB adapter TX).
 
 Connect your adapter to your computer and use Device Manager to identify the COM port, in my case COM3. Configure PuTTY to use your COM port at 115200 baud:
 
