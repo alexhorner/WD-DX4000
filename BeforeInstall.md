@@ -24,5 +24,5 @@ Connect your adapter to your computer and use Device Manager to identify the COM
 
 ## Part 2 - Choose Your OS
 This guide explains the full installation process of Ubuntu and Debian. Please choose one of the guide files listed below to continue your installation:
-- InstallDebian.md
-- InstallUbuntu.md
+- [Install Debian](InstallDebian.md)
+- [Install Ubuntu](InstallUbuntu.md)
