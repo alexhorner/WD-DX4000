@@ -252,4 +252,4 @@ As you can see my DX4000's IP is `10.0.10.10` on my local network! Lets SSH to t
 
 For the sake of it, you can use the command `shutdown -h now` to shut your DX4000 down, then turn it back on yourself and see it spring to life with no intervention! One Debian server for you to run whatever you want!
 
-Please return to README.md for links to other guides, such as setting up 4 hard drives with the 4 bays in the NAS!
+Please return to [README](README.md) for links to other guides, such as setting up 4 hard drives with the 4 bays in the NAS!
