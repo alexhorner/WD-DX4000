@@ -1,5 +1,5 @@
 # Debian Installation Guide
-NOTE: This guide expects you to have followed BeforeInstall.md! If you haven't, go do it!
+NOTE: This guide expects you to have followed [Before Install](BeforeInstall.md)! If you haven't, go do it!
 
 You will need the Debian installation ISO to follow this guide. This guide follows the Debian 10.06.0 install process, however differences should be minimal.
 
@@ -252,4 +252,4 @@ As you can see my DX4000's IP is `10.0.10.10` on my local network! Lets SSH to t
 
 For the sake of it, you can use the command `shutdown -h now` to shut your DX4000 down, then turn it back on yourself and see it spring to life with no intervention! One Debian server for you to run whatever you want!
 
-Please return to README.md for links to other guides, such as setting up 4 hard drives with the 4 bays in the NAS!
+Please return to [README](README.md) for links to other guides, such as setting up 4 hard drives with the 4 bays in the NAS!

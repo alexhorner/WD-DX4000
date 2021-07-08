@@ -1,5 +1,5 @@
 # Ubuntu Installation Guide
-NOTE: This guide expects you to have followed BeforeInstall.md! If you haven't, go do it!
+NOTE: This guide expects you to have followed [Before Install](BeforeInstall.md)! If you haven't, go do it!
 
 You will need the Ubuntu Server installation ISO to follow this guide. This guide follows the Ubuntu Server 20.04.2 LTS install process, however differences should be minimal.
 
@@ -204,4 +204,4 @@ You will now boot into Ubuntu! Remember, it may take a moment before you start t
 
 For the sake of it, you can use the command `shutdown -h now` to shut your DX4000 down, then turn it back on yourself and see it spring to life with no intervention! One Ubuntu server for you to run whatever you want!
 
-Please return to README.md for links to other guides, such as setting up 4 hard drives with the 4 bays in the NAS!
+Please return to [README](README.md) for links to other guides, such as setting up 4 hard drives with the 4 bays in the NAS!

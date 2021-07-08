@@ -36,21 +36,21 @@ This guide will go through the entire process of running Ubuntu or Debian on the
 
 ---
 
-Head to BeforeInstall.md to start!
+Head to [Before Install](BeforeInstall.md) to start!
 
 ## Other guides
-- Hard Drives - Disks.md
-- Fan - Superio.md
-- LCD - LCD.md
-- Hardware - Hardware.md
+- [Hard Drives](Disks.md)
+- [Fan](Superio.md)
+- [LCD](LCD.md)
+- [Hardware](Hardware.md)
 
 ---
 
 ## Goals
-- Fan Control - **COMPLETE** Superio.md
-- LCD Writing - **COMPLETE** LCD.md
+- [Fan Control](Superio.md) - **COMPLETE**
+- [LCD Writing](LCD.md) - **COMPLETE**
 - LCD Contrast - (IN PROGRESS! See IO repo at top of this README) Works with manual control in default Windows
-- LCD Brightness - **COMPLETE** LCD.md
+- [LCD Brightness](LCD.md) - **COMPLETE**
 - Front Panel Button Reads - (IN PROGRESS! See IO repo at top of this README) Works with manual control in default Windows
 - LED Control (RAID indicators and power indicators. Red and blue individually) - (IN PROGRESS! See IO repo at top of this README)  Pretty sure this is available as it is used by the default Windows software, but I couldn't work out how to control manually within default Windows
 
