@@ -1,5 +1,5 @@
 # Debian Installation Guide
-NOTE: This guide expects you to have followed BeforeInstall.md! If you haven't, go do it!
+NOTE: This guide expects you to have followed [Before Install](BeforeInstall.md)! If you haven't, go do it!
 
 You will need the Debian installation ISO to follow this guide. This guide follows the Debian 10.06.0 install process, however differences should be minimal.
 
