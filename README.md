@@ -38,6 +38,16 @@ This guide will go through the entire process of running Ubuntu or Debian on the
 
 Head to [Before Install](BeforeInstall.md) to start!
 
+## Troubleshooting
+### My Debian/Ubuntu doesn't boot automatically, even after setting up BIOS. BIOS resets the boot order!
+If this occurs for you, start into Debian/Ubuntu manually and install `efibootmgr`. Use `efibootmgr` to delete all boot entried **except** your Linux installation. Please make sure you check every command you run and have other bootable disks disconnected from the system.
+
+The general command is `efibootmgr -b <boot entry> -B` but please check this yourself first! To list entries, just run `efibootmgr` alone. Don't include the asterisks * in the command.
+
+Once complete, reboot back into BIOS and set your boot order as per your OS's install document from this guide.
+
+_Reference: https://askubuntu.com/questions/348763/removing-entries-from-uefi-menu-with-efibootmgr_
+
 ## Other guides
 - [Hard Drives](Disks.md)
 - [Fan](Superio.md)
