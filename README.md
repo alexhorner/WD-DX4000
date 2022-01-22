@@ -7,6 +7,16 @@ Running Ubuntu or Debian on the Western Digital WD Sentinel DX4000
 
 ---
 
+## 2022 Update - Solderless installer
+- I am now in the process of building a fully solderless installer
+- No tools other than USB sticks will be required
+- No changes to BIOS options or other reconfigurations required
+- SSH install over the network with the current IP shown on LCD
+
+Stay tuned for a complete overhaul for this process!
+
+---
+
 ## 2021 Update - Ubuntu and Front Panel Controls
 - Ubuntu is now available
 - Work has begun on providing an interface for the entire front panel of the machine, including buttons, LCD (control, contract, brightness) and LEDs. Please visit the dedicated repo for more information and for a working proof of concept: https://github.com/alexhorner/WD-DX4000-IO
