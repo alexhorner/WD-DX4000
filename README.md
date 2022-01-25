@@ -15,6 +15,8 @@ Running Ubuntu or Debian on the Western Digital WD Sentinel DX4000
 
 Stay tuned for a complete overhaul for this process!
 
+https://github.com/alexhorner/WD-DX4000-Installer
+
 ---
 
 ## 2021 Update - Ubuntu and Front Panel Controls
