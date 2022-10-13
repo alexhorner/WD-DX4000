@@ -59,11 +59,13 @@ Size=16x2
 DelayBus=no
 ```
 
+*Please note that in Ubuntu 22.04, the lcdproc service was renamed from LCDd to lcdproc. You may need to check both.*
+
 Now save and close the file with CTRL+X then Y then Enter.
 
-Start LCDd with the `service LCDd start` command.
+Start LCDd with the `service lcdproc start` command.
 
-You can configure LCDd to start at boot with the `systemctl enable LCDd` command.
+You can configure lcdproc to start at boot with the `systemctl enable lcdproc` command.
 
 The LCD should now show the server home screen like below:
 
@@ -72,6 +74,24 @@ The LCD should now show the server home screen like below:
 You can start displaying statistics by simply running the `lcdproc -f` command which shows a series of screens. For more information on available screens use `lcdproc -h`. Here is an example screen:
 
 ![LCDProc Example](./img/lcdprocexample.jpg?raw=true)
+
+You may also want to modify the `/lib/systemd/system/lcdproc.service` file, which is the lcpdroc service file, to increase the brightness of the display and automatically start the statistics, and to kill the statistics and dim the brightness when the service stops. Here's my custom service file as an example:
+
+```
+[Unit]
+Description=LCD display daemon
+Documentation=man:LCDd(8) http://www.lcdproc.org/
+
+[Service]
+User=root
+ExecStartPre=bash -c "echo \"255\" > /sys/class/hwmon/hwmon1/pwm3"
+ExecStart=/usr/sbin/LCDd -s 1 -f -c /etc/LCDd.conf
+ExecStartPost=bash -c "sleep 5 && lcdproc C P M U S K"
+ExecStop=bash -c "echo \"128\" > /sys/class/hwmon/hwmon1/pwm3"
+
+[Install]
+WantedBy=multi-user.target
+```
 
 ### Custom DX4000 Software
 TODO
