@@ -75,7 +75,7 @@ You can start displaying statistics by simply running the `lcdproc -f` command w
 
 ![LCDProc Example](./img/lcdprocexample.jpg?raw=true)
 
-You may also want to modify the `/lib/systemd/system/lcdproc.service` file, which is the lcpdroc service file, to increase the brightness of the display and automatically start the statistics, and to kill the statistics and dim the brightness when the service stops. Here's my custom service file as an example:
+You may also want to modify the `/lib/systemd/system/lcdproc.service` file, which is the lcdproc service file, to increase the brightness of the display and automatically start the statistics, and to kill the statistics and dim the brightness when the service stops. Here's my custom service file as an example:
 
 ```
 [Unit]
