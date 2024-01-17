@@ -84,6 +84,6 @@ DISCLAIMER: I am not liable to any damages of any kind which are caused directly
 
 ## Contact me!
 
-If there is an issue with this repository in ANY way, such as a broken link, broken instruction in the guide, missing resource or ANYTHING else, please open an issue on the repository.
+If there is an issue with this repository in any way, such as a broken link, broken instruction in the guide, missing resource or anything else, please open an issue on the repository.
 
-If you are interested in helping, please contact me via email at ahorner@programmer.net preferrably with some information on what you are capable of doing and i'll see what I can give you as something I cannot do. Of course I will give credit where credit is due!
+If you are interested in helping, please contact me by finding the most up to date email address on my profile, preferrably with some information on what you are capable of doing and I'll see what I can give you as something I cannot do. Of course I will give credit where credit is due!
