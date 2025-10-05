@@ -34,7 +34,7 @@ More information can be found on the LCDProc document http://lcdproc.sourceforge
 ### LCDProc
 LCDProc is a popular free LCD control daemon for Linux. It supports the DX4000's LCD and can show system statistics and other information.
 
-To install LCDProc run the `apt-get install lcdproc` command.
+To install LCDProc run the `apt-get install lcdproc lcdproc-extra-drivers` command.
 
 Once installed, we need to configure LCDd to use the LCD correctly. Open LCDd's config with the `nano /etc/LCDd.conf` command.
 
