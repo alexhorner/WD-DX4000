@@ -267,3 +267,64 @@ Now we need to enable fan control at startup. Run the `systemctl enable fancontr
 We can also start fan control immediately with `service fancontrol start`.
 
 You can also reboot with `shutdown -r now` to test fan control enables at boot.
+
+## GPIO support on current Debian kernels
+
+The DX4000 front-panel LEDs are connected to the Intel ICH GPIO block. On current Debian 13 (Trixie) kernels, the `gpio_ich` driver may not be enabled in the stock kernel configuration. For example, this was verified on Debian kernel `6.12.113+deb13-amd64`, where `/boot/config-$(uname -r)` contains no `CONFIG_GPIO_ICH` entry.
+
+If `modprobe gpio_ich` reports that the module cannot be found, the driver can be built as an external module from the matching Debian kernel source. This uses the unmodified `drivers/gpio/gpio-ich.c` shipped in Debian's `linux-source` package.
+
+Install the matching headers, kernel source and build tools:
+
+```sh
+sudo apt install build-essential linux-headers-$(uname -r) linux-source-6.12
+```
+
+Create a small external-module build directory and extract the driver source from Debian's source archive:
+
+```sh
+sudo mkdir -p /usr/local/src/gpio-ich-module
+cd /usr/local/src/gpio-ich-module
+
+sudo sh -c 'tar -xOf /usr/src/linux-source-6.12.tar.xz \
+  linux-source-6.12/drivers/gpio/gpio-ich.c > gpio-ich.c'
+
+printf 'obj-m += gpio-ich.o\n' | sudo tee Makefile
+```
+
+Build it against the currently running kernel:
+
+```sh
+sudo make -C /lib/modules/$(uname -r)/build \
+  M=/usr/local/src/gpio-ich-module modules
+```
+
+Install the module, update the dependency database and load it:
+
+```sh
+sudo install -D -m 0644 \
+  /usr/local/src/gpio-ich-module/gpio-ich.ko \
+  /lib/modules/$(uname -r)/extra/gpio-ich.ko
+
+sudo depmod -a
+sudo modprobe gpio_ich
+```
+
+To load it automatically at boot:
+
+```sh
+echo gpio_ich | sudo tee /etc/modules-load.d/gpio-ich.conf
+```
+
+You can verify that the GPIO controller is available with:
+
+```sh
+lsmod | grep gpio_ich
+ls /dev/gpiochip*
+```
+
+### Kernel updates
+
+This is an out-of-tree module built for one specific kernel ABI. After installing a new kernel, rebuild and reinstall `gpio-ich.ko` against the new kernel's headers before rebooting into it, or use direct `/dev/port` access instead if your application supports that.
+
+The front-panel GPIO mappings are documented separately in [FrontPanel.md](./FrontPanel.md).
