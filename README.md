@@ -64,6 +64,7 @@ _Reference: https://askubuntu.com/questions/348763/removing-entries-from-uefi-me
 - [Hard Drives](Disks.md)
 - [Fan](Superio.md)
 - [LCD](LCD.md)
+- [Front panel controls](FrontPanel.md)
 - [Hardware](Hardware.md)
 
 ---
