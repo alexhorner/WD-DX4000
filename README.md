@@ -64,9 +64,15 @@ _Reference: https://askubuntu.com/questions/348763/removing-entries-from-uefi-me
 - [Hard Drives](Disks.md)
 - [Fan](Superio.md)
 - [LCD](LCD.md)
+- [Linux front-panel tool](https://github.com/MiQ71/WD-DX4000-FrontPanel)
 - [Hardware](Hardware.md)
 
 ---
+
+
+### Linux front-panel implementation
+
+A standalone Linux implementation of the verified front-panel mappings is available at [MiQ71/WD-DX4000-FrontPanel](https://github.com/MiQ71/WD-DX4000-FrontPanel). It provides drive-bay LED control and locate mode, power LED control, LCD backlight/brightness control, SMART/RAID health indication, and an Up/Down button event reader.
 
 ## Goals
 - [Fan Control](Superio.md) - **COMPLETE**
